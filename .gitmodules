@@ -1,0 +1,3 @@
+[submodule "library/PlaywrightLibraryTest"]
+	path = library/PlaywrightLibraryTest
+	url = https://github.com/srinikethag/PlaywrightLibraryTest.git
