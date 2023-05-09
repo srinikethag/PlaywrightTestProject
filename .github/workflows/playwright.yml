@@ -17,8 +17,20 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
+    - name: Install testmo cli
+      run: npm install --no-save @testmo/testmo-cli
+    - name: Run Playwright tests 
+      run: |
+          npx testmo automation:run:submit \
+            --instance "$TESTMO_URL" \
+            --project-id 1 \
+            --name "Mocha test run" \
+            --source "unit-tests" \
+            --results results/*.xml \
+            -- npm run mocha-junit # Note space after --
+      env:
+          TESTMO_URL: ${{ secrets.TESTMO_URL }}
+          TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
     - uses: actions/upload-artifact@v3
       if: always()
       with:
