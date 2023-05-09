@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/srinikethag/PlaywrightTestProject#readme",
   "devDependencies": {
-    "@playwright/test": "^1.31.0"
+    "@playwright/test": "^1.33.0"
   }
 }

@@ -1,0 +1,14 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="8.721809000000357">
+<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.178" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="2.178">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="firefox" tests="1" failures="0" skipped="0" time="1.711" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="1.711">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="webkit" tests="1" failures="0" skipped="0" time="2.314" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="2.314">
+</testcase>
+</testsuite>
+</testsuites>

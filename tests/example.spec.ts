@@ -1,6 +1,6 @@
 // example.spec.ts
 import { test, expect } from '@playwright/test';
-import { homePage } from '../library/PlaywrightLibraryTest/pageObjects/homePage';
+import { homePage } from '../library/homePage';
 
 test('Open Installation page', async ({ page }) => {
   const homepage = new homePage(page);
