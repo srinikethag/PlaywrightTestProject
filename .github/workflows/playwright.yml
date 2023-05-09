@@ -24,10 +24,10 @@ jobs:
           npx testmo automation:run:submit \
             --instance "$TESTMO_URL" \
             --project-id 1 \
-            --name "Mocha test run" \
-            --source "unit-tests" \
+            --name "Playwright test run" \
+            --source "frontend" \
             --results results/*.xml \
-            -- npm run mocha-junit # Note space after --
+            -- npx playwright test # Note space after --
       env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
