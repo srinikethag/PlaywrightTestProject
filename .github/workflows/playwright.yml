@@ -22,14 +22,7 @@ jobs:
     - name: Install testomat.io
       run: npm i --save-dev @testomatio/reporter
     - name: Run Playwright tests 
-      run: |
-          npx testmo automation:run:submit \
-            --instance "$TESTMO_URL" \
-            --project-id 1 \
-            --name "Playwright test run" \
-            --source "frontend" \
-            --results results/*.xml \
-            -- TESTOMATIO=byf5cbe18n06 npx playwright test # Note space after --
+      run: TESTOMATIO=byf5cbe18n06 npx playwright test
       env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
