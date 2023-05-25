@@ -19,6 +19,8 @@ jobs:
       run: npx playwright install --with-deps
     - name: Install testmo cli
       run: npm install --no-save @testmo/testmo-cli
+    - name: Install testomat.io
+      run: npm i --save-dev @testomatio/reporter
     - name: Run Playwright tests 
       run: |
           npx testmo automation:run:submit \
@@ -27,10 +29,11 @@ jobs:
             --name "Playwright test run" \
             --source "frontend" \
             --results results/*.xml \
-            -- npx playwright test # Note space after --
+            -- TESTOMATIO=byf5cbe18n06 npx playwright test # Note space after --
       env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+      
     - uses: actions/upload-artifact@v3
       if: always()
       with:
