@@ -29,8 +29,16 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter:[['./node_modules/@testomatio/reporter/lib/adapter/playwright.js', {
+  /*reporter:[['./node_modules/@testomatio/reporter/lib/adapter/playwright.js', {
     apiKey: process.env.TESTOMATIO,
+  }]],
+  */
+  reporter: [['junit', { 
+    outputFile: 'results/test-results.xml',
+    embedAnnotationsAsProperties: true,
+
+    // Not used by Testmo
+    // embedAttachmentsAsProperty: undefined 
   }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

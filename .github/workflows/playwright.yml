@@ -19,10 +19,25 @@ jobs:
       run: npx playwright install --with-deps
     - name: Install testmo cli
       run: npm install --no-save @testmo/testmo-cli
-    - name: Install testomat.io
-      run: npm i --save-dev @testomatio/reporter
+
+    - name: Add few configs 
+      run: |
+        npx testmo automation:resources:add-field --name git --type string \
+        --value ${GITHUB_SHA:0:7} --resources resources.json
+        RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+        npx testmo automation:resources:add-link --name build \
+        --url $RUN_URL --resources resources.json
+    
     - name: Run Playwright tests 
-      run: TESTOMATIO=byf5cbe18n06 npx playwright test
+      run: |
+        npx testmo automation:run:submit \
+        --instance "$TESTMO_URL" \
+        --project-id 1 \
+        --name "Test run" \
+        --source "Playwright EtoE tests" \
+        --resources resources.json \
+        --results results/*.xml \
+        -- npx playwright test
       env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
