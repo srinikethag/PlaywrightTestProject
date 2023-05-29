@@ -32,7 +32,7 @@ jobs:
       run: |
         npx testmo automation:run:submit \
         --instance "$TESTMO_URL" \
-        --project-id 2 \
+        --project-id 1 \
         --name "Test run" \
         --source "Playwright-EtoE-tests" \
         --resources resources.json \
