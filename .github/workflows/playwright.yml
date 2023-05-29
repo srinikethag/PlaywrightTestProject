@@ -34,7 +34,7 @@ jobs:
         --instance "$TESTMO_URL" \
         --project-id 1 \
         --name "Test run" \
-        --source "Playwright EtoE tests" \
+        --source "Playwright-EtoE-tests" \
         --resources resources.json \
         --results results/*.xml \
         -- npx playwright test
