@@ -1,14 +1,164 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="8.721809000000357">
-<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.178" errors="0">
-<testcase name="Open Installation page" classname="example.spec.ts" time="2.178">
+<testsuites id="" name="" tests="75" failures="0" skipped="0" errors="0" time="15.628519000053405">
+<testsuite name="demo-todo-app.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="chromium" tests="24" failures="0" skipped="0" time="21.553" errors="0">
+<testcase name="New Todo › should allow me to add todo items" classname="demo-todo-app.spec.ts" time="2.241">
+</testcase>
+<testcase name="New Todo › should clear text input field when an item is added" classname="demo-todo-app.spec.ts" time="2.161">
+</testcase>
+<testcase name="New Todo › should append new items to the bottom of the list" classname="demo-todo-app.spec.ts" time="2.192">
+</testcase>
+<testcase name="Mark all as completed › should allow me to mark all items as completed" classname="demo-todo-app.spec.ts" time="2.32">
+</testcase>
+<testcase name="Mark all as completed › should allow me to clear the complete state of all items" classname="demo-todo-app.spec.ts" time="2.293">
+</testcase>
+<testcase name="Mark all as completed › complete all checkbox should update state when items are completed / cleared" classname="demo-todo-app.spec.ts" time="2.431">
+</testcase>
+<testcase name="Item › should allow me to mark items as complete" classname="demo-todo-app.spec.ts" time="0.437">
+</testcase>
+<testcase name="Item › should allow me to un-mark items as complete" classname="demo-todo-app.spec.ts" time="0.454">
+</testcase>
+<testcase name="Item › should allow me to edit an item" classname="demo-todo-app.spec.ts" time="0.529">
+</testcase>
+<testcase name="Editing › should hide other controls when editing" classname="demo-todo-app.spec.ts" time="0.392">
+</testcase>
+<testcase name="Editing › should save edits on blur" classname="demo-todo-app.spec.ts" time="0.398">
+</testcase>
+<testcase name="Editing › should trim entered text" classname="demo-todo-app.spec.ts" time="0.414">
+</testcase>
+<testcase name="Editing › should remove the item if an empty text string was entered" classname="demo-todo-app.spec.ts" time="0.406">
+</testcase>
+<testcase name="Editing › should cancel edits on escape" classname="demo-todo-app.spec.ts" time="0.476">
+</testcase>
+<testcase name="Counter › should display the current number of todo items" classname="demo-todo-app.spec.ts" time="0.341">
+</testcase>
+<testcase name="Clear completed button › should display the correct text" classname="demo-todo-app.spec.ts" time="0.409">
+</testcase>
+<testcase name="Clear completed button › should remove completed items when clicked" classname="demo-todo-app.spec.ts" time="0.424">
+</testcase>
+<testcase name="Clear completed button › should be hidden when there are no items that are completed" classname="demo-todo-app.spec.ts" time="0.392">
+</testcase>
+<testcase name="Persistence › should persist its data" classname="demo-todo-app.spec.ts" time="0.452">
+</testcase>
+<testcase name="Routing › should allow me to display active items" classname="demo-todo-app.spec.ts" time="0.418">
+</testcase>
+<testcase name="Routing › should respect the back button" classname="demo-todo-app.spec.ts" time="0.541">
+</testcase>
+<testcase name="Routing › should allow me to display completed items" classname="demo-todo-app.spec.ts" time="0.493">
+</testcase>
+<testcase name="Routing › should allow me to display all items" classname="demo-todo-app.spec.ts" time="0.517">
+</testcase>
+<testcase name="Routing › should highlight the currently applied filter" classname="demo-todo-app.spec.ts" time="0.422">
 </testcase>
 </testsuite>
-<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="firefox" tests="1" failures="0" skipped="0" time="1.711" errors="0">
-<testcase name="Open Installation page" classname="example.spec.ts" time="1.711">
+<testsuite name="example.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.543" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="0.543">
 </testcase>
 </testsuite>
-<testsuite name="example.spec.ts" timestamp="2023-05-09T15:27:29.382Z" hostname="webkit" tests="1" failures="0" skipped="0" time="2.314" errors="0">
-<testcase name="Open Installation page" classname="example.spec.ts" time="2.314">
+<testsuite name="demo-todo-app.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="firefox" tests="24" failures="0" skipped="0" time="20.7" errors="0">
+<testcase name="New Todo › should allow me to add todo items" classname="demo-todo-app.spec.ts" time="1.252">
+</testcase>
+<testcase name="New Todo › should clear text input field when an item is added" classname="demo-todo-app.spec.ts" time="1.167">
+</testcase>
+<testcase name="New Todo › should append new items to the bottom of the list" classname="demo-todo-app.spec.ts" time="1.269">
+</testcase>
+<testcase name="Mark all as completed › should allow me to mark all items as completed" classname="demo-todo-app.spec.ts" time="1.187">
+</testcase>
+<testcase name="Mark all as completed › should allow me to clear the complete state of all items" classname="demo-todo-app.spec.ts" time="1.33">
+</testcase>
+<testcase name="Mark all as completed › complete all checkbox should update state when items are completed / cleared" classname="demo-todo-app.spec.ts" time="1.483">
+</testcase>
+<testcase name="Item › should allow me to mark items as complete" classname="demo-todo-app.spec.ts" time="0.688">
+</testcase>
+<testcase name="Item › should allow me to un-mark items as complete" classname="demo-todo-app.spec.ts" time="0.727">
+</testcase>
+<testcase name="Item › should allow me to edit an item" classname="demo-todo-app.spec.ts" time="0.721">
+</testcase>
+<testcase name="Editing › should hide other controls when editing" classname="demo-todo-app.spec.ts" time="0.7">
+</testcase>
+<testcase name="Editing › should save edits on blur" classname="demo-todo-app.spec.ts" time="0.761">
+</testcase>
+<testcase name="Editing › should trim entered text" classname="demo-todo-app.spec.ts" time="0.701">
+</testcase>
+<testcase name="Editing › should remove the item if an empty text string was entered" classname="demo-todo-app.spec.ts" time="0.702">
+</testcase>
+<testcase name="Editing › should cancel edits on escape" classname="demo-todo-app.spec.ts" time="0.613">
+</testcase>
+<testcase name="Counter › should display the current number of todo items" classname="demo-todo-app.spec.ts" time="0.628">
+</testcase>
+<testcase name="Clear completed button › should display the correct text" classname="demo-todo-app.spec.ts" time="0.633">
+</testcase>
+<testcase name="Clear completed button › should remove completed items when clicked" classname="demo-todo-app.spec.ts" time="0.743">
+</testcase>
+<testcase name="Clear completed button › should be hidden when there are no items that are completed" classname="demo-todo-app.spec.ts" time="0.666">
+</testcase>
+<testcase name="Persistence › should persist its data" classname="demo-todo-app.spec.ts" time="0.911">
+</testcase>
+<testcase name="Routing › should allow me to display active items" classname="demo-todo-app.spec.ts" time="0.723">
+</testcase>
+<testcase name="Routing › should respect the back button" classname="demo-todo-app.spec.ts" time="0.781">
+</testcase>
+<testcase name="Routing › should allow me to display completed items" classname="demo-todo-app.spec.ts" time="0.78">
+</testcase>
+<testcase name="Routing › should allow me to display all items" classname="demo-todo-app.spec.ts" time="0.805">
+</testcase>
+<testcase name="Routing › should highlight the currently applied filter" classname="demo-todo-app.spec.ts" time="0.729">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="firefox" tests="1" failures="0" skipped="0" time="0.669" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="0.669">
+</testcase>
+</testsuite>
+<testsuite name="demo-todo-app.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="webkit" tests="24" failures="0" skipped="0" time="16.973" errors="0">
+<testcase name="New Todo › should allow me to add todo items" classname="demo-todo-app.spec.ts" time="0.93">
+</testcase>
+<testcase name="New Todo › should clear text input field when an item is added" classname="demo-todo-app.spec.ts" time="0.926">
+</testcase>
+<testcase name="New Todo › should append new items to the bottom of the list" classname="demo-todo-app.spec.ts" time="0.94">
+</testcase>
+<testcase name="Mark all as completed › should allow me to mark all items as completed" classname="demo-todo-app.spec.ts" time="0.984">
+</testcase>
+<testcase name="Mark all as completed › should allow me to clear the complete state of all items" classname="demo-todo-app.spec.ts" time="1.043">
+</testcase>
+<testcase name="Mark all as completed › complete all checkbox should update state when items are completed / cleared" classname="demo-todo-app.spec.ts" time="1.094">
+</testcase>
+<testcase name="Item › should allow me to mark items as complete" classname="demo-todo-app.spec.ts" time="0.651">
+</testcase>
+<testcase name="Item › should allow me to un-mark items as complete" classname="demo-todo-app.spec.ts" time="0.636">
+</testcase>
+<testcase name="Item › should allow me to edit an item" classname="demo-todo-app.spec.ts" time="0.606">
+</testcase>
+<testcase name="Editing › should hide other controls when editing" classname="demo-todo-app.spec.ts" time="0.604">
+</testcase>
+<testcase name="Editing › should save edits on blur" classname="demo-todo-app.spec.ts" time="0.632">
+</testcase>
+<testcase name="Editing › should trim entered text" classname="demo-todo-app.spec.ts" time="0.601">
+</testcase>
+<testcase name="Editing › should remove the item if an empty text string was entered" classname="demo-todo-app.spec.ts" time="0.553">
+</testcase>
+<testcase name="Editing › should cancel edits on escape" classname="demo-todo-app.spec.ts" time="0.559">
+</testcase>
+<testcase name="Counter › should display the current number of todo items" classname="demo-todo-app.spec.ts" time="0.609">
+</testcase>
+<testcase name="Clear completed button › should display the correct text" classname="demo-todo-app.spec.ts" time="0.662">
+</testcase>
+<testcase name="Clear completed button › should remove completed items when clicked" classname="demo-todo-app.spec.ts" time="0.602">
+</testcase>
+<testcase name="Clear completed button › should be hidden when there are no items that are completed" classname="demo-todo-app.spec.ts" time="0.629">
+</testcase>
+<testcase name="Persistence › should persist its data" classname="demo-todo-app.spec.ts" time="0.639">
+</testcase>
+<testcase name="Routing › should allow me to display active items" classname="demo-todo-app.spec.ts" time="0.555">
+</testcase>
+<testcase name="Routing › should respect the back button" classname="demo-todo-app.spec.ts" time="0.658">
+</testcase>
+<testcase name="Routing › should allow me to display completed items" classname="demo-todo-app.spec.ts" time="0.623">
+</testcase>
+<testcase name="Routing › should allow me to display all items" classname="demo-todo-app.spec.ts" time="0.67">
+</testcase>
+<testcase name="Routing › should highlight the currently applied filter" classname="demo-todo-app.spec.ts" time="0.567">
+</testcase>
+</testsuite>
+<testsuite name="example.spec.ts" timestamp="2023-05-29T09:17:47.488Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.591" errors="0">
+<testcase name="Open Installation page" classname="example.spec.ts" time="0.591">
 </testcase>
 </testsuite>
 </testsuites>
