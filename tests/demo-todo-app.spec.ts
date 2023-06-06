@@ -28,7 +28,7 @@ test.describe('New Todo', () => {
     await newTodo.fill(TODO_ITEMS[1]);
     await newTodo.press('Enter');
 
-    // Make sure the list now has two todo items.
+    // Make sure the list now has two todo items..
     await expect(page.getByTestId('todo-title')).toHaveText([
       TODO_ITEMS[0],
       TODO_ITEMS[1]
