@@ -33,7 +33,7 @@ jobs:
         npx testmo automation:run:submit \
         --instance "$TESTMO_URL" \
         --project-id 1 \
-        --tags test-tag2 \
+        --tags playwright \
         --config-id 52 \
         --name "Test run" \
         --source "Playwright-EtoE-tests" \
