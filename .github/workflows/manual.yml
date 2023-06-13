@@ -7,8 +7,6 @@ jobs:
 
     steps:
       - run: echo "Building .."
-      - name: Install testmo cli
-        run: npm install --no-save @testmo/testmo-cli
   
   test-setup:
     needs: build
@@ -33,7 +31,22 @@ jobs:
           RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           npx testmo automation:resources:add-link --name build \
             --url $RUN_URL --resources resources.json
+      
+      # Check if the required variables are available
+      - run: |
+          if [[ -z "${TESTMO_URL}" ]]; then
+            echo "The TESTMO_URL secret is not defined for this repository"
+            exit 1
+          fi
 
+          if [[ -z "${TESTMO_TOKEN}" ]]; then
+            echo "The TESTMO_TOKEN secret is not defined for this repository"
+            exit 1
+          fi
+        env:
+          TESTMO_URL: ${{ secrets.TESTMO_URL }}
+          TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
+      
       # Create test run
       - run: |
           npx testmo automation:run:create \
@@ -58,14 +71,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ci_index: [0, 1, 2, 3]
-        ci_total: [4]
+        ci_index: [0, 1, 2, 3, 4, 5, 6, 7]
+        ci_total: [8]
         
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 19
     - name: Install dependencies
       run: npm ci
     - name: Install testmo cli
@@ -73,21 +86,13 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Add few configs 
-      run: |
-        npx testmo automation:resources:add-field --name git --type string \
-        --value ${GITHUB_SHA:0:7} --resources resources.json
-        RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-        npx testmo automation:resources:add-link --name build \
-        --url $RUN_URL --resources resources.json
-    
     - name: Run Playwright tests 
       run: |
         npx testmo automation:run:submit-thread \
         --instance "$TESTMO_URL" \
         --run-id "${{ needs.test-setup.outputs.testmo-run-id }}" \
         --results results/*.xml \
-        -- npx playwright test
+        -- npx playwright test --workers 8
       env:
           CI_TOTAL: ${{ matrix.ci_total }}
           CI_INDEX: ${{ matrix.ci_index }}
@@ -123,10 +128,3 @@ jobs:
         env:
           TESTMO_URL: ${{ secrets.TESTMO_URL }}
           TESTMO_TOKEN: ${{ secrets.TESTMO_TOKEN }}
-
-  deploy:
-    needs: [test, test-complete]
-    runs-on: ubuntu-latest
-
-    steps:
-      - run: echo "Deploying .."
