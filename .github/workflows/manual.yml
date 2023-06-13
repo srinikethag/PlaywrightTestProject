@@ -92,7 +92,7 @@ jobs:
         --instance "$TESTMO_URL" \
         --run-id "${{ needs.test-setup.outputs.testmo-run-id }}" \
         --results results/*.xml \
-        -- npx playwright test --workers 8
+        -- npx playwright test
       env:
           CI_TOTAL: ${{ matrix.ci_total }}
           CI_INDEX: ${{ matrix.ci_index }}
